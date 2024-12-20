@@ -1,0 +1,125 @@
+@import "../../globals.scss";
+
+.search-box{
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.391);
+    border-radius: 30px;
+    margin: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+
+    .searchbarnav{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 20px 20px;
+        font-size: 25px;
+        color: rgba(25, 25, 25, 0.798);
+    }
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 50px;
+    background-color: rgba(255, 255, 255, 0.391);
+    box-shadow: 0px 10px 5px rgba(255, 255, 255, 0.391);
+    img{
+        width: 70px;
+        transition-duration: 0.5s;
+    }
+    img:hover{
+        transform: scale(1.1);
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li{
+            list-style-type: none;
+            padding-left: 40px;
+          
+
+            .navbar-link{
+                text-decoration: none;
+                
+            }
+        }
+        li:hover{
+            color:#779ebf;
+        }
+        
+    }
+    .mobileresponsivemenubar{
+        display: none;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 320px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        .mobile-search{
+            top: 0;
+            position:absolute;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            input{
+                background-color: #4962760f;
+                border: none;
+                outline: none;
+                padding: 10px;
+                height: 30px;
+            }
+            .searchbar{
+                margin-right: 20px;
+                height: 30px;
+                background-color: #4962760f;
+            }
+        }
+        .social-media{
+            display: flex;
+            justify-content: space-around;
+            width: 300px;
+            position: absolute;
+            bottom: 0;
+            padding-bottom: 10px;
+            img{
+                width: 50px;
+            }
+        }
+        li{
+            list-style-type: none;
+
+            padding: 10px;
+        }
+        
+        li:hover{
+            color:#779ebf;
+        }
+    }
+}
+.navbar-link:hover{
+    color:#779ebf;
+}
+
+@media only screen and (max-width: $mobile) {
+    nav{
+        ul{
+            display: none;
+        }
+        .hamburgur{
+            display: block;
+        }
+    }
+}
+
