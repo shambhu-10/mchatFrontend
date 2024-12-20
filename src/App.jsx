@@ -33,7 +33,11 @@ library.add(
   faClose
 );
 
-const socket = io.connect("http://localhost:5000");
+// Connect to the deployed backend
+const socket = io("https://mchat-bwun.onrender.com", {
+  transports: ["websocket"],
+});
+
 
 function App() {
   return (
